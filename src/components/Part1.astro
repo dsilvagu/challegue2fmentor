@@ -1,0 +1,21 @@
+---
+interface Props {
+    image1: string;
+    url: string;
+    text1: string;
+    title: string;
+    text2: string;
+    image2: string;
+    name: string
+}
+const {image1, url, text1, title, text2, image2 , name} = Astro.props;
+---
+<img class="rounded-lg" src={image1} alt="">
+<p class="bg-pyellow w-max py-1 px-3 text-sm font-bold rounded-md">{url}</p>
+<p class="font-semibold text-sm">{text1}</p>
+<h1 class="font-extrabold text-xl">{title}</h1>
+<p class="text-pgrey text-wrap">{text2}</p>
+<div class="flex items-center gap-3">
+    <img class="size-10" src={image2} alt="">
+    <h1 class="text-sm font-extrabold">{name}</h1>
+</div>
